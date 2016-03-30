@@ -1,19 +1,35 @@
-<html ng-app="recipeApp">
+<html ng-app="recipesApp">
 <head>
-  ...
-  <script src="bower_components/angular/angular.js"></script>
+  <title>AngularJS Code Sample</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
   <script src="js/controllers/recipes.js"></script>
 </head>
 <body ng-controller="recipeListController">
 
-  <ul>
-    <li ng-repeat="recipe in recipes">
-      <span>{{recipe.name}}</span>
-      <p>Time Taken : {{recipe.timeTaken}} minutes</p>
-      <p>Servings : {{recipe.servings}}</p>
-      <p>Cost : {{recipe.cost}}</p>
-    </li>
-  </ul>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Recipes</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+        <ul class="list-group text-center">
+          <li class="list-group-item" ng-repeat="recipe in recipes">
+            <h4>{{recipe.name}}</h4>
+            <p>Time Taken : {{recipe.timeTaken}}</p>
+            <p>Servings : {{recipe.servings}}</p>
+            <p>Cost : {{recipe.cost}}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
