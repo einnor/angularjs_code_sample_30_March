@@ -1,0 +1,19 @@
+<html ng-app="recipeApp">
+<head>
+  ...
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="js/controllers/recipes.js"></script>
+</head>
+<body ng-controller="recipeListController">
+
+  <ul>
+    <li ng-repeat="recipe in recipes">
+      <span>{{recipe.name}}</span>
+      <p>Time Taken : {{recipe.timeTaken}} minutes</p>
+      <p>Servings : {{recipe.servings}}</p>
+      <p>Cost : {{recipe.cost}}</p>
+    </li>
+  </ul>
+
+</body>
+</html>
